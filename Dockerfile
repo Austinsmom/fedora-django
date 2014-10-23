@@ -12,3 +12,5 @@ RUN yum install -y python-devel python-virtualenv supervisor mariadb-libs mariad
 
 RUN pip install django
 
+EXPOSE 8000
+
