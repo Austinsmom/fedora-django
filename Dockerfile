@@ -8,7 +8,7 @@ RUN yum update -y
 
 RUN yum install redhat-rpm-config -y
 
-RUN yum install freetype-devel libjpeg-devel libpng-devel
+RUN yum install freetype-devel libjpeg-devel libpng-devel -y
 
 RUN yum groupinstall -y "Development Tools"
 
