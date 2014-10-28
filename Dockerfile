@@ -2,7 +2,7 @@ FROM tutum/fedora:21
 
 MAINTAINER Yohan Graterol <yohangraterol92@gmail.com>
 
-VOLUME ["/app/"]
+VOLUME ["/app"]
 
 RUN yum update -y
 
