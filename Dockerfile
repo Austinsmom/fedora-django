@@ -14,7 +14,15 @@ RUN yum groupinstall -y "Development Tools"
 
 RUN yum install -y python-devel python-virtualenv supervisor mariadb-libs mariadb-devel postgresql-devel postgresql-libs sqlite python-pip GeoIP GeoIP-update GeoIP-devel python-pygeoip
 
-RUN yum install -y libffi-devel libcurl-devel
+RUN yum install -y libffi-devel libcurl-devel wget
+
+RUN wget http://www.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
+
+RUN	tar xvf GeoIP.tar.gz
+
+RUN	cd GeoIP-1.4.8/;./configure;make;sudo make install
+
+RUN	rm -rf GeoIP*
 
 EXPOSE 8000
 
