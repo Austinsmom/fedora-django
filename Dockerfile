@@ -16,6 +16,10 @@ RUN yum install -y python-devel python-virtualenv supervisor mariadb-libs mariad
 
 RUN yum install -y libffi-devel libcurl-devel wget tar
 
+RUN yum install npm
+
+RUN yum clean all
+
 RUN wget http://www.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
 
 RUN tar xvf GeoIP.tar.gz
